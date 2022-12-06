@@ -4,7 +4,7 @@ from autoload.models import DumpTruck, TruckModel
 
 @admin.register(DumpTruck)
 class DumpTruckAdmin(admin.ModelAdmin):
-    list_display = ['name', 'model', 'side_number']
+    list_display = ['name', 'model', 'side_number', 'current_load']
 
 
 @admin.register(TruckModel)

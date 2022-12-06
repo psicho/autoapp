@@ -17,6 +17,7 @@ class DumpTruck(models.Model):
         related_name='dumptruck'
     )
     side_number = models.CharField(max_length=30, unique=True, blank=True)
+    current_load = models.DecimalField(max_digits=5, decimal_places=2, blank=True, default=None)
 
     def __str__(self):
         return f"Самосвал №{self.side_number}, модель {self.model}"
