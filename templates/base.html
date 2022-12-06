@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <style>
+        label {
+            clear:both;
+            color:#333;
+            margin-bottom:4px;
+            font-weight:bold;
+            font-size:20px;
+
+        }
+        select, textarea {
+            clear:both;
+            background:#efefef;
+            border:0;
+            padding:6px 10px;
+            font-size:14px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        input[type=submit], a.button {
+            font-weight:bold;
+            background:#1c63e3;
+            color:#fff;
+            padding:7px 10px;
+            font-size:14px;
+            text-transform:uppercase;
+            border-radius: 20px;
+            margin-left: 10px;
+            border-color: #1c63e3;
+
+        }
+        input:hover {
+            opacity:0.8;
+        }
+        input[type="submit"]:active {
+            opacity:0.4;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th {
+            background-color: rgba(28, 99, 227, 0.79);
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        td {
+            text-align: center;
+            padding: 8px;
+        }
+        tr {
+            background-color: rgba(28, 99, 227, 0.35);
+        }
+        tr:last-child td:first-child {
+            border-radius: 0 0 0 10px;
+        }
+        th:first-child {
+            border-radius: 10px 0 0 0;
+        }
+        th:last-child {
+            border-radius: 0 10px 0 0;
+        }
+        tr:last-child td:last-child {
+            border-radius: 0 0 10px 0;
+        }
+    </style>
+{% block body %}{% endblock %}
+</body>
+</html>
