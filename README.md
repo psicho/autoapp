@@ -2,7 +2,7 @@
 ### install requirements
 - pip install -r requirements.txt
 ### run commands
-- Django run: ./manage.py runserver
+- Django run: **python manage.py runserver**
 ### project urls
 - main page: http://127.0.0.1:8000
 - admin page: http://127.0.0.1:8000/admin/
