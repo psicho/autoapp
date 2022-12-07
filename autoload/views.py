@@ -4,7 +4,6 @@ from django.views.generic import TemplateView
 
 class MainView(TemplateView):
     template_name = "index.html"
-    truck_models_list = get_truck_models_list()
 
     def get_context_data(self, *, object_list=None, **kwargs):
         truck_models_list = get_truck_models_list()
