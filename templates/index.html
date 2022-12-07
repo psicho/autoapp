@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Мониторинг{% endblock %}
+{% block body %}
+    <h1>Мониториг самосвалов</h1>
+    <form method="post" id="select_model">
+        {% csrf_token %}
+        <label for="trucks">Модель:</label>
+        <select id="trucks" name="trucklist" form="select_model">
+            {% for model in truck_models_list %}
+                <option value={{model.id}}
+                        {% if selected_model == model.id %}
+                        selected="selected" color="black"
+                        {% endif %}>{{model.name}}
+                </option>
+            {% endfor %}
+        </select>
+        <input id="submin" name="model" type="submit" value="Применить">
+    </form>
+    <table>
+        <tr>
+            <th>Бортовой номер</th>
+            <th>Модель</th>
+            <th>Макс. грузоподъёмность</th>
+            <th>Текущий вес</th>
+            <th>Перегруз, %</th>
+        </tr>
+        {% for truck in dump_trucks %}
+        <tr>
+            <td>{{ truck.side_number }}</td>
+            <td>{{ truck.model }}</td>
+            <td>{{ truck.capacity }}</td>
+            <td>{{ truck.current_load }}</td>
+            <td>{{ truck.overload }}</td>
+        </tr>
+        {% endfor %}
+</table>
+{% endblock %}
