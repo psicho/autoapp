@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'autoload.apps.AutoloadConfig',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
